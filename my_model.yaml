@@ -1,0 +1,32 @@
+augmentation_batch_size: 16
+augmentation_rounds: 1
+background_paths:
+- ./resources/audioset_16k
+- ./resources/fma
+background_paths_duplication_rate:
+- 1
+batch_n_per_class:
+  ACAV100M_sample: 1024
+  adversarial_negative: 50
+  positive: 50
+custom_negative_phrases: []
+datasets: ./dataset
+false_positive_validation_data_path: ./resources/validation_set_features.npy
+feature_data_files:
+  ACAV100M_sample: ./resources/openwakeword_features_ACAV100M_2000_hrs_16bit.npy
+layer_size: 32
+max_negative_weight: 1500
+model_name: hi_aldelo_2025-10-28_06-37-56
+model_type: dnn
+n_samples: 10
+n_samples_val: 10
+negative_data: negative_data
+output_dir: ./trained_models/
+piper_sample_generator_path: ./piper-sample-generator
+rir_paths:
+- ./resources/mit_rirs
+steps: 20000
+target_false_positives_per_hour: 0.2
+target_phrase:
+- hi_aldelo
+tts_batch_size: 50
